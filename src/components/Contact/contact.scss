@@ -1,0 +1,93 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+#contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 90px;
+    @include breakpoint-1 {
+        flex-direction: column;
+    }
+    @include breakpoint-4 {
+        flex-direction: row;
+    }
+    .headline {
+        width: 90%;
+        .headline-text {
+            color: $ligth-gray;
+            font-size: $s;
+            font-family: $title-font;
+            line-height: 1.2;
+            text-align: center;
+        }
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include breakpoint-4 {
+            flex-direction: row;
+        }
+        .contact-links {
+            display: block;
+            @include breakpoint-4 {
+                width: 50%;
+            }
+            .qr-container {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                #QR-WA {
+                    margin: auto;
+                    max-width: 100%;
+                }
+                .label-qr-contact{
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            .social-media-container {
+                max-width: 250px;
+                margin: 30px auto;
+                @include breakpoint-4 {
+                    width: 50%;
+                }
+                .social-media-text {
+                    font-family: $title-font;
+                    font-weight: bolder;
+                    font-size: $main;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: $main-color;
+                }
+                .social-media-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+                    .social-media-item {
+                        .link-sm {
+                            color: $main-color;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .form-container {
+            display: block;
+            width: 100%;
+            @include breakpoint-4 {
+                width: 50%;
+            }
+            input {
+                font-family: $main-font;
+            }
+        }
+    }
+}

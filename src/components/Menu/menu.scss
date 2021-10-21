@@ -1,0 +1,133 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.main-menu, .menu-header :not(.footer) {
+    display: none;
+    .menu-button-actived & {
+        background-color: $main-color;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        padding: 0 50px;
+        position: fixed;
+        top: 60px; right: 0; bottom: 0; left: 0;
+        z-index: 9999999;
+    }
+    @include breakpoint-4 {
+        align-items: center;
+        background-color: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+    }
+    .menu-item {
+        display: flex;
+        align-items: center;
+        @include breakpoint-1 {
+            opacity: 0;
+            margin: 15px;
+            transform: translateX(20px);
+            transition: all 0.3s;
+            $time-offset-close: 0;
+            @for $i from 5 through 1 {
+                &:nth-childn(n + #{$i}) {
+                    $time-offset-close: $time-offset-close + 0.5;
+                    transition-delay: #{$time-offset-close}s;
+                    span {
+                        transition-delay: #{$time-offset-close}s;
+                    }
+                }
+            }
+            .menu-button-actived & {
+                opacity: 1;
+                // transition: all 0.3s;
+                transform: translateX(0);
+                backface-visibility: hidden;
+                $time-offset-open: 1;
+                @for $i from 1 through 5 {
+                    &:nth-child(n + #{$i}) {
+                        $time-offset-open: $time-offset-open + 0.5;
+                        transition-delay: #{$time-offset-open}s;
+                        span {
+                            transition-delay: #{$time-offset-open}s;
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint-4 {
+            opacity: 1;
+            margin: 0;
+        }
+        .menu-link  {
+            color: $white;
+            display: inline-block;
+            font-family: $title-font;
+            font-size: $s;
+            font-weight: 500;
+            line-height: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 7px 0;
+            .menu-button-actived & {
+                display: block;
+                opacity: 1;
+                text-align: start;
+                transition: opacity 0s ease 2s;
+            }	
+            @include breakpoint-4 {
+                font-size: $xs;
+                padding: 0 15px;
+                &:hover {
+                    color: $supplementary-color;
+                    text-decoration-line: none;
+                    transition: color ease-out .7s;
+                }
+                &:active {
+                    font-style: italic;
+                }
+            }
+            @include breakpoint-4 {
+                cursor: pointer;
+                // font-size: $font-size-s;
+                margin: 0 5px;
+            }
+            @include breakpoint-5 {
+                // font-size: $font-size-normal;
+                margin: 0 5px;
+            }
+            @include breakpoint-7 {
+                // font-size: $font-size-l;
+                margin: 0 5px;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+.main-menu {
+    &.menu-header {
+        .menu-item {
+            @include breakpoint-4 {
+
+                &:last-child {
+                    background-color: $supplementary-color;
+                    color: $white;
+                    border-radius: 5px;
+                    max-width: 135px;
+                    justify-content: center;
+                    .menu-link {
+                        line-height: 40px;
+                    }
+                    &:hover {
+                        border-color: $supplementary-color;
+                        background-color: $main-color;
+                        color: $supplementary-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.main {
+    position: relative;
+    height: auto;
+    width: 100%;
+    &:first-child {
+        margin-top: 85px;
+    }
+}

@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+#para-quien {
+    height: auto;
+    position: relative;
+    .bg-color {
+        background-color: $supplementary-color;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        @include breakpoint-1 {
+            height: 7%;
+            top: 13%;
+        }
+        @include breakpoint-2 {
+            height: 15%;
+            top: 17%;
+        }
+    }
+    #methodology {
+        display: block;
+        width: 100%;
+        position: relative;
+        @include breakpoint-1 {
+            height: 440px;
+        }
+        @include breakpoint-2 {
+            height: 500px
+        }
+        @include breakpoint-3 {
+            height: 600px;
+        }
+        #banner-meth {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: inherit;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            .message-container {
+                width: 80%;
+                height: 80%;
+                @include breakpoint-4 {
+                    width: 50%;
+                }
+                .img-methodology {
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    margin: auto;
+                    height: 100%;
+                    max-width: 100%;
+                    display: block;
+                    z-index: 9999;
+                }
+            }
+        }
+    }
+}

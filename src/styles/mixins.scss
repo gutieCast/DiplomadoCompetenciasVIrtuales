@@ -1,0 +1,92 @@
+@mixin breakpoint-1 {
+    // small mobile
+    @media (min-width: 240px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-2 {
+    // normal mobile
+    @media (min-width: 481px) {
+        @content;
+    }
+}
+
+
+@mixin breakpoint-3 {
+    // horizontal mobile - tablet
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-4 {
+    // horizontal tablet - minilaptop
+    @media (min-width: 999px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-5 {
+    // minilaptop
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-6 {
+    // laptop
+    @media (min-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-7 {
+    // Large-screen
+    @media (min-width: 1824px) {
+        @content;
+    }
+}
+
+///////////////////////////
+@mixin setLastChildFluid {
+    @for $i from 1 through 10 {    
+      $li: 3;
+      @if $i % 3 == 0{
+        $li: 1;
+      } @else if $i % 3 == 1{
+        $li: 3;
+      } @else if $i % 3 == 2{
+        $li: 2;
+      } 
+      @if $li == 2 {
+        li:nth-child(#{$i - 1}){
+          &:nth-last-child(2){
+            // grid-column-end:li 1;
+            position:relative;
+            bottom:0;
+            width:calc(150% + 5px);
+            left:calc(60% + 5px);    
+          }
+        }
+        li:nth-child(#{$i}){
+          &:nth-last-child(1){
+            grid-column-start:2;
+            position:relative;
+            bottom:0;
+            width:calc(150% + 5px);
+            left:calc(60% + 5px);
+          }
+        }
+        
+      } 
+    //   @else {
+    //     li:nth-child(#{$i}){
+    //       &:last-child{
+    //           grid-column-end:li #{$li};          
+    //       }
+    //     }
+    //   }
+      
+    }
+  }

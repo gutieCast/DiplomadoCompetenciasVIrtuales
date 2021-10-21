@@ -1,0 +1,37 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+
+
+.button-fixed {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 5%;
+    width: 130px;
+    z-index: 9999;
+    right: -15%;
+    // @include breakpoint-3 {
+    //     right: 50px;
+    // }
+    .word-balloon {
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: 130px;
+        height: 40px;
+        text-align: center;
+        color: $white;
+        font-family: $main-font;
+        line-height: 35px;
+        z-index: 999;
+    }
+    a {
+        display: inline-flex;
+        width: 50px;
+        .button-icon {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+}

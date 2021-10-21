@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.slider {
+    width: 70vw;
+    padding: 0 0 50px 0;
+    height: min-content;
+    .position-slider {
+        display: block;
+        .slider-container {
+            margin: 0 30px;
+            height: auto;
+            .cards-container {
+                grid-gap: 30px;
+                // height: auto;
+                // width: 100%;
+                height: inherit;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        .button-slider, 
+        .button-slider:hover, 
+        .button-slider:visited {
+            color: $info-color;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}

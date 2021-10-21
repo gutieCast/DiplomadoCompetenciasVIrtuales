@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+#inversion {
+    .title-section-center {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .cards-grid {
+        border-color: transparent;
+        max-width: 1300px;
+        padding: 0;
+        @include breakpoint-3 {
+            margin-top: 55px;
+        }
+        .card-item {
+            padding-top: 15px;
+            display: block;
+        }
+        @include breakpoint-3 {
+            align-items: center;
+            justify-items: center;
+            box-sizing: content-box;
+            display: grid;
+            grid-gap: 7px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-4 {
+            grid-gap: 50px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .banner-container-inscription {
+        width: 100vw;
+        height: 350px;
+    }
+    .banner-inscription {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 100%;
+        min-height: 100%;
+        // @include breakpoint-4 {
+        // }
+        .banner-text {
+            color: $white;
+            font-family: $title-font;
+            text-transform: uppercase;
+            font-weight: bolder;
+            font-size: $title-l;
+            text-align: center;
+            @include breakpoint-4 {
+                font-size: 90px;
+                margin: 50px;
+            }
+        }
+    }
+}

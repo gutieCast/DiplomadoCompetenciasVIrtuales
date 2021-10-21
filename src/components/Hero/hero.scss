@@ -1,0 +1,66 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+#hero {
+    margin-top: 85px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    #img-hero {
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        display: flex;
+        height: 100vh;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        @include breakpoint-1 {
+            background-position-x: -150px;
+        }
+        @include breakpoint-4 {
+            background-position: center;
+        }
+        // @include breakpoint-1 {
+        //     height: 600px;
+        // }
+        // @include breakpoint-2 {
+        //     height: 1000px;
+        // }
+        // @include breakpoint-3 {
+        //     height: 1400px;
+        // }
+        // @include breakpoint-4 {
+        //     height: 100vh;
+        // }
+        .logo-course-container {
+            width: 70%;
+            height: 70%;
+            @include breakpoint-1 {
+                padding-top: 315px;
+                width: 80%;
+            }
+            // @include breakpoint-6 {
+            //     margin-top: 550px;
+            //     // width: 70%;
+            // }
+            .logo-course {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                height: 220px;
+                margin: auto;
+                @include breakpoint-1 {
+                    width: 100%;
+                }
+                @include breakpoint-4 {
+                    width: 750px;
+                }
+
+            }
+        }
+    }
+}
