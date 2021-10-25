@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { Button } from '../../../Button'
 import './card.scss'
 
-const Card = ({ recomended, title, price, label, extraItem, description, linkButton }) => {
+const Card = ({ recomended, title, price, label, description, linkButton }) => {
 
     const history = useHistory()
 

@@ -9,7 +9,10 @@
     bottom: 5%;
     width: 130px;
     z-index: 9999;
-    right: -15%;
+    right: -9%;
+    @include breakpoint-3 {
+        right: 9%;
+    }
     // @include breakpoint-3 {
     //     right: 50px;
     // }

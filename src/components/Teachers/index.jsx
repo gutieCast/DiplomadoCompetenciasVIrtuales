@@ -1,5 +1,6 @@
 import React from 'react'
 import { ContentBox, SlideNav } from '../../components'
+import './teachers.scss'
 
 const Teachers = () => {
     return (

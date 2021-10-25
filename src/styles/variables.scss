@@ -8,15 +8,22 @@ $ligth-gray: #B2B2B2;
 $white: #FFFFFF;
 
 //FONTS & SIZES
+@font-face {
+    font-family: 'Helvetica Rounded';
+    font-style: bold;
+    src: local('Helvetica Rounded'), local('Helvetica Rounded'),
+         url('../assets/fonts/HelveticaRounded/HELVETICAROUNDEDLTSTD-BD.OTF') format('opentype'),
+  }
+
 
 $main-font: 'Inter', sans-serif;
-$title-font: 'Poppins', sans-serif;
+$title-font: 'Helvetica Rounded', sans-serif;
 
 $xxs: 9px;
 $xs: 15px;
 $s: 20px;
 $main: 25px;
-$title-s: 28px;
+$title-s: 30px;
 $title-m: 35px;
 $title: 43px;
 $title-l: 53px;

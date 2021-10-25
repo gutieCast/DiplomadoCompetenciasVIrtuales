@@ -7,7 +7,7 @@ const MainMenu = () => {
     return (
         <nav id="main-navegator">
             {
-                window.innerWidth > 999
+                window.innerWidth > 1025
                     ? < Menu styleAnimation={"uk-animation-slide-top-small"} styleName={'menu-header'} />
                     :
                     <BurguerButton>

@@ -14,7 +14,7 @@ const Menu = ({ styleAnimation, styleName }) => {
     return (
         <ul className={`main-menu  ${styleName}`}>
             {
-                menu.map(({ name, link, hash }) =>
+                menu.map(({ name, link }) =>
                     <li className={`${styleAnimation} menu-item`}
                         key={name}
                         onClick={(e) => handleClick(e)}

@@ -65,8 +65,7 @@
             // grid-column-end:li 1;
             position:relative;
             bottom:0;
-            width:calc(150% + 5px);
-            left:calc(60% + 5px);    
+            left:calc(65%);    
           }
         }
         li:nth-child(#{$i}){
@@ -74,8 +73,7 @@
             grid-column-start:2;
             position:relative;
             bottom:0;
-            width:calc(150% + 5px);
-            left:calc(60% + 5px);
+            left:calc(65%);
           }
         }
         

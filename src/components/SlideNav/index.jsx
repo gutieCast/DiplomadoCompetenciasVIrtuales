@@ -30,7 +30,7 @@ const SlideNav = ({ modules, teachers }) => {
             className="uk-position-relative uk-visible-toggle uk-light slider" tabIndex="-1" >
             <div className="uk-position-relative position-slider">
                 <div className="uk-slider-container uk-grid slider-container">
-                    <ul className="uk-slider-items uk-child-width-expand-1-1@s uk-child-width-1-2@m cards-container">
+                    <ul className="uk-slider-items uk-child-width-expand-1-1@s uk-child-width-1-3@m cards-container">
                         {
                             modules &&
                             infoModules.map((module, idx) => {

@@ -4,7 +4,7 @@
 #header {
 	align-items: center;
     display: flex;
-    justify-content: flex-start;
+    // justify-content: space-between;
     height: 85px;
     background-color: $main-color;
     position: fixed;
@@ -24,7 +24,7 @@
 	@include breakpoint-4 {
 		padding: 0 55px;
 	}
-	@include breakpoint-5 {
+	@include breakpoint-6 {
 		padding: 0 70px;
 	}
 	@include breakpoint-7 {

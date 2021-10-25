@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-input-2'
 import es from 'react-phone-input-2/lang/es.json'
 import { Button } from '../Button'
 import { validations } from '../../helpers/validations'
+import { infoCourse } from '../../helpers/data'
 import 'react-phone-input-2/lib/style.css'
 import './form.scss'
 
@@ -26,11 +27,14 @@ const Form = ({ signIn }) => {
     const [paymentModality, setPaymentModality] = useState(sessionStorage.getItem("option"))
     const [goPay, setGoPay] = useState(false);
 
-    const options = [
-        { value: 'sistema-modular', title: '1 módulo (Bs. 500)' },
-        { value: 'sistema-tetramodular', title: '4 módulos (Bs. 1600)' },
-        { value: 'diplomado-completo', title: '12 módulos (Bs. 3500)' }
-    ];
+    const { inversion } = infoCourse
+
+    const options = [];
+    inversion.forEach(({ optionSelected, optionForm }) => {
+        let option = { value: optionSelected, title: optionForm }
+        options.push(option)
+        return options
+    })
 
     const data = { name, lastname, email, phone, profession, organization, paymentModality };
 
@@ -55,6 +59,7 @@ const Form = ({ signIn }) => {
         setOrganization('');
         setPaymentModality('');
         firstRender.current = true
+        sessionStorage.setItem('email', email)
         setGoPay(true)
     }
 
@@ -113,14 +118,15 @@ const Form = ({ signIn }) => {
     const handleSubmitContact = (e) => {
         e.preventDefault();
         sendMessage(msg)
-        setIsDisabled(true);
         setName('');
         setEmail('');
         setPhone('');
         setOrganization('');
         setSubject('');
         setMessage('');
+        setIsDisabled(true);
         firstRender.current = true
+        console.log('finished!');
     }
 
     useEffect(() => {

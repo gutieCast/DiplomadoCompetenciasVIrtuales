@@ -3,66 +3,37 @@
 
 .grid-container {
     display: block; 
-    width: 80%;
-    padding: 30px;
-    @include breakpoint-3 {
+    width: 90%;
+    padding: 30px 10px;
+    @include breakpoint-2 {
+        width: 80%;
+    }
+    @include breakpoint-4 {
         width: 70%;
     }
     .grid-collaborators {
         display: grid;
         margin: auto;
         padding: 0;
+        
         @include breakpoint-1 {
+            grid-gap: 10px;
             grid-gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto repeat(2, 1fr);
-        }
-        @include breakpoint-3 {
-            grid-gap: 40px;
             grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: auto;
+        }
+        @include breakpoint-2 {
         }
         .logo-collab-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-
-            @include setLastChildFluid
+            justify-content: center; 
         }
-            .logo-collab {
-                color: $white;
-                @include breakpoint-1 {
-                    max-width: 70%;
-                    max-height: 70%;  
-                }
-                @include breakpoint-2 {
-                    max-width: 80%;
-                }            
-                // @include breakpoint-3 {
-                //     max-width: 80%;
-                // }   
-                // @include breakpoint-6 {
-                //     max-width: 70%;
-                //     max-height: 70%;
-                // }
-                // @include breakpoint-7 {
-                //     max-width: 50%;
-                //     max-height: 50%;
-                    
-                // }
-
-                // @include breakpoint-1 {
-                    //     margin: 0 15px;
-                    // }
-                // @include breakpoint-2 {
-                //     margin: 0 20px;
-                // }
-                // @include breakpoint-3 {
-                    //     max-width: 8%;
-                // }
-                // @include breakpoint-4 {
-                    //     margin: 0 40px;
-                // }
+        .logo-collab {
+            color: $white; 
+            max-width: 100%;
+            @include breakpoint-4 {
+                max-width: 90px;
+            }
         }      
     }    
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Redirect } from 'react-router-dom'
 import { ContentBox } from '../../components/ContentBox'
+import { validations } from '../../helpers/validations'
 import { Button } from '../../components/Button'
 import { qrPay } from '../../helpers/images'
 import './paymentMeth.scss'
@@ -80,6 +81,14 @@ export const ProofInput = ({ setGoFinished }) => {
 
 const PaymentMeth = () => {
 
+    const [email, setEmail] = useState('')
+    const { errors, validateEmail } = validations
+
+    const handleInput = (e, validate, set) => {
+        validate(e.target.value);
+        set(e.target.value);
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -100,6 +109,10 @@ const PaymentMeth = () => {
                     Paso 2 de 2
                 </label>
                 <div className="text-container">
+                    <div className="uk-margin">
+                        <input className="uk-input" name="email" id="email" type="email" placeholder="*Confirmar correo electrónico" value={email} onChange={(e) => handleInput(e, validateEmail, setEmail)} />
+                        {errors.email !== '' ? <span>{errors.email}</span> : ''}
+                    </div>
                     <p>
                         Puedes realizar el pago por transferencia bancaria simple o escanear nuestro código QR, luego adjunta tu comprobante bancario
                     </p>
@@ -113,14 +126,14 @@ const PaymentMeth = () => {
                     </div>
                     <div className="info-container">
                         <h4 className="main-info">
-                            Banco Unión
+                            Cuenta corriente Banco Unión
                         </h4>
                         <div>
                             <label className="info">
                                 Número de cuenta:
                             </label>
-                            <p className="main-info">
-                                10000033397444 (Bs)
+                            <p className="number-info">
+                                10000033396991 (Bs.)
                             </p>
                         </div>
                         <div>
@@ -128,7 +141,7 @@ const PaymentMeth = () => {
                                 A nombre de:
                             </label>
                             <p className="main-info">
-                                José Antonio Bedregal Fernández
+                                INNOVAPAX STUDIO S.R.L.
                             </p>
                             <label className="info">
                                 Cuenta corporativa iPAX Studio

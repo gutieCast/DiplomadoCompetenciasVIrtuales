@@ -19,7 +19,7 @@
         flex-direction: column;
         width: 100%;
         @include breakpoint-1 {
-            background-position-x: -150px;
+            background-position-x: -180px;
         }
         @include breakpoint-4 {
             background-position: center;
@@ -39,14 +39,10 @@
         .logo-course-container {
             width: 70%;
             height: 70%;
-            @include breakpoint-1 {
-                padding-top: 315px;
-                width: 80%;
+            padding-top: calc(30% + 10px);
+            @include breakpoint-3 {
+                padding-top: calc(20% + 10px);
             }
-            // @include breakpoint-6 {
-            //     margin-top: 550px;
-            //     // width: 70%;
-            // }
             .logo-course {
                 background-repeat: no-repeat;
                 background-position: center;

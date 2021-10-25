@@ -26,6 +26,7 @@
         display: block;
         text-transform: uppercase;
         font-size: $title-s;
+        font-family: $title-font;
         font-weight: 700;
         letter-spacing: 4px;
         line-height: 1.2;
@@ -53,7 +54,7 @@
         @include breakpoint-4 {
             padding: 0 15px;
             display: inline-block; 
-            // padding: 30px 70px;
+            padding: 15px 35px;
             width: 50%;
             margin: 0;
         }
@@ -72,7 +73,7 @@
         margin: auto;
         width: 100%;
         @include breakpoint-4 {
-            padding: 50px;
+            padding: 50px 0;
             display: inline-block;
             width: 50%;
             margin: 0;
@@ -80,15 +81,11 @@
         .title-section {
             color: $main-color;
             font-size: $title-s;
-            font-weight: 700;
-            letter-spacing: 4px;
+            font-family: $title-font;
             line-height: 1.2;
             padding-bottom: 5px;
             text-transform: uppercase;
             margin: 20px 0;
-            @include breakpoint-4 {
-                font-size: $title;
-            }
             .title-line {
                 background-color: $supplementary-color;
                 display: block;

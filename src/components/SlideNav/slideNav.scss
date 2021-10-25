@@ -5,18 +5,19 @@
     width: 70vw;
     padding: 0 0 50px 0;
     height: min-content;
+    @include breakpoint-3 {
+        width: 70vw;
+    }
     .position-slider {
         display: block;
         .slider-container {
             margin: 0 30px;
             height: auto;
             .cards-container {
-                grid-gap: 30px;
-                // height: auto;
-                // width: 100%;
-                height: inherit;
+                height: min-content;
                 display: flex;
                 flex-direction: row;
+                grid-gap: 30px;
             }
         }
         .button-slider, 

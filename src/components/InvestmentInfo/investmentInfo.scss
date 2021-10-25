@@ -10,26 +10,35 @@
         border-color: transparent;
         max-width: 1300px;
         padding: 0;
+        width: 90%;
         @include breakpoint-3 {
+            align-items: center;
+            box-sizing: content-box;
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
             margin-top: 55px;
+            width: 70%;
         }
         .card-item {
             padding-top: 15px;
-            display: block;
-        }
-        @include breakpoint-3 {
-            align-items: center;
-            justify-items: center;
-            box-sizing: content-box;
-            display: grid;
-            grid-gap: 7px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include breakpoint-4 {
-            grid-gap: 50px;
-            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
         }
     }
+
+    .investment-content {
+        width: 70%;
+        // padding: 0 30px;
+        .investment-text {
+           font-weight: bold;
+       }
+       .investment-list > li {
+           list-style: disc;
+       }
+    }
+
+
     .banner-container-inscription {
         width: 100vw;
         height: 350px;
@@ -44,8 +53,12 @@
         flex-direction: column;
         min-width: 100%;
         min-height: 100%;
-        // @include breakpoint-4 {
-        // }
+        @include breakpoint-1 {
+            background-position-x: -150px;
+        }
+        @include breakpoint-3 {
+            background-position-x: center;
+        }
         .banner-text {
             color: $white;
             font-family: $title-font;

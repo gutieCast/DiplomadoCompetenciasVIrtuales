@@ -2,12 +2,9 @@ import React from 'react'
 import { ContentBox } from '../../components/ContentBox'
 import { Button } from '../../components/Button'
 import { logo } from '../../helpers/images'
-import { infoCourse } from '../../helpers/data'
 import './finishedPage.scss'
 
 const FinishedScreen = () => {
-    const { nameCourse } = infoCourse
-
     return (
         <section id="finished-page">
             <ContentBox
@@ -16,8 +13,8 @@ const FinishedScreen = () => {
                 hideDiv={true}
                 flowContent={'center'}
             >
-                <div className="logo-container">
-                    <img src={logo} alt={`logo ${nameCourse}`} />
+                <div className="logo-container-finished">
+                    <img src={logo.img} alt={logo.alt} />
                 </div>
                 <div className="text-container">
                     <p className="text-dark">

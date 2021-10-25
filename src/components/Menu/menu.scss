@@ -71,6 +71,12 @@
             text-transform: uppercase;
             text-decoration: none;
             margin: 7px 0;
+            @include breakpoint-3 {
+                font-size: 13px;
+            }
+            // @include breakpoint-4 {
+            //     font-size: $s;
+            // }
             .menu-button-actived & {
                 display: block;
                 opacity: 1;
@@ -78,8 +84,8 @@
                 transition: opacity 0s ease 2s;
             }	
             @include breakpoint-4 {
-                font-size: $xs;
-                padding: 0 15px;
+                // font-size: $xs;
+                padding: 0 13px;
                 &:hover {
                     color: $supplementary-color;
                     text-decoration-line: none;
