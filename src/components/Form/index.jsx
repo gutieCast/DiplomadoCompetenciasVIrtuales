@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Redirect } from 'react-router'
-import PhoneInput from 'react-phone-input-2'
-import es from 'react-phone-input-2/lang/es.json'
+import PhoneInput from 'react-phone-number-input'
+import es from 'react-phone-number-input/locale/es.json'
 import { Button } from '../Button'
 import { validations } from '../../helpers/validations'
 import { infoCourse } from '../../helpers/data'
-import 'react-phone-input-2/lib/style.css'
+import 'react-phone-number-input/style.css'
 import './form.scss'
 
 const Form = ({ signIn }) => {
@@ -163,7 +163,7 @@ const Form = ({ signIn }) => {
                             </div>
 
                             <div className="uk-margin">
-                                <PhoneInput country='bo' localization={es} className="uk-input input-phone" placeholder="Número celular" inputStyle={{ backgroundColor: 'transparent', color: '#FFFFFF', width: '100%' }} name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
+                                <PhoneInput defaultCountry='BO' labels={es} international={true} className="uk-input input-phone" placeholder="Número celular" inputStyle={{ backgroundColor: 'transparent', color: '#FFFFFF', width: '100%', border: 'none' }} name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
                                 {errors.phone !== '' ? <span>{errors.phone}</span> : ''}
                             </div>
 
@@ -209,7 +209,7 @@ const Form = ({ signIn }) => {
                             </div>
 
                             <div className="uk-margin">
-                                <PhoneInput country='bo' localization={es} className="uk-input input-phone" placeholder="Número celular" name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
+                                <PhoneInput defaultCountry='BO' labels={es} international={true} className="uk-input input-phone" placeholder="Número celular" name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
                                 {errors.phone !== '' ? <span>{errors.phone}</span> : ''}
                             </div>
 

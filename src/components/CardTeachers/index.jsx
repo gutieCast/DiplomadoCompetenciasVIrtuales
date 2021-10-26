@@ -6,8 +6,7 @@ const CardTeacher = ({ src, nameTeacher, description }) => {
 
     const [infoIsExpanded, setInfoIsExpanded] = useState(false);
 
-    const handleClick = (e) => {
-        e.preventDefault()
+    const handleClick = () => {
         if (infoIsExpanded) {
             setInfoIsExpanded(false)
         } else {
@@ -15,8 +14,16 @@ const CardTeacher = ({ src, nameTeacher, description }) => {
         }
     }
 
+    const onMouseEnter = () => {
+        setInfoIsExpanded(true)
+    }
+
+    const onMouseLeave = () => {
+        setInfoIsExpanded(false)
+    }
+
     return (
-        <div className="card-container-teacher" tabIndex="0" onClick={(e) => handleClick(e)} >
+        <div className="card-container-teacher" tabIndex="0" onMouseEnter={() => onMouseEnter()} onMouseLeave={() => onMouseLeave()} onClick={() => handleClick()} >
             <div className="uk-card uk-card-default teacher-card">
                 <div className="uk-animation-toggle uk-card-media-top card-img" tabIndex="1">
                     <img src={src} alt={`${nameTeacher} card`} />

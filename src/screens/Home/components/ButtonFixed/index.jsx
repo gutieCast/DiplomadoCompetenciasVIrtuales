@@ -13,11 +13,10 @@ const ButtonFixed = () => {
     const [hovered, setHovered] = useState(false);
 
     useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = false
-            return
-        }
-        setTimeout(() => setShowBalloon(false), 5000)
+        const timer = setTimeout(() => {
+            setShowBalloon(true)
+        }, 10000);
+        return () => clearTimeout(timer)
     }, [])
 
     const onMouseEnter = () => {

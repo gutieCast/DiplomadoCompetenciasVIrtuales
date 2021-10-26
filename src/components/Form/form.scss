@@ -9,46 +9,26 @@
     width: 80%;
     .fieldset {
         width: 100%;
-        .flag-dropdown {
-            background-color: $main-color;
-            color: $white;
-            font-family: $title-font;
-            .selected-flag:hover, .selected-flag:active, .selected-flag:focus {
-                background-color: $main-color;
-                color: $main-color;
-            }
-            .country {
-                &:hover, &:active, &:focus, &:visited, &.highlight {
-                    background-color: $main-color;
-                    color: $main-color;
-                }
-            }
-            .country-list {
-                background-color: $info-color;
-            }
-            .country-name {
-                color: $white;
-                &:hover {
-                    color: $main-color;
-                }    
-            }
-        }
+
         .uk-input, .payment-modality {
             background-color: $main-color;
             color: $white;
-            font-family: $title-font;
+            font-family: $main-font;
             border: 1px solid #e5e5e5;
             border-radius: 5px;
             width: 100%;
             padding-left: 10px;
             padding-right: 10px;
+            &:hover {
+                border: 1px solid $supplementary-color;
+            }
         }
     }
 }
 
 #payment-modality {
     background-color: $main-color;
-    font-family: $title-font;
+    font-family: $main-font;
     font-size: 15px;
     height: 40px;
     color: $ligth-gray;
@@ -72,18 +52,30 @@ span {
     width: 80%;
     .fieldset {
         width: 100%;
-        .flag-dropdown {
-            .country-name {
-                color: $main-color;
-                // &:hover {
-                //     color: $main-color;
-                // } 
-            }
-        }
         .uk-input, .uk-select, .uk-textarea, .form-control {
+            font-family: $main-font;
             width: 100%;
             border: 1px solid #e5e5e5;
             border-radius: 5px;
         }
+    }
+}
+
+.PhoneInputInput {
+    background-color: transparent;
+    border: transparent;
+    font-family: $main-font;
+    .sign-form & {
+        color: $ligth-gray;        
+            &:focus-visible {
+                accent-color: $main-color;
+            }
+        
+    }
+    .contact-form & {     
+            &:focus-visible {
+                accent-color: $white;
+            }
+        
     }
 }

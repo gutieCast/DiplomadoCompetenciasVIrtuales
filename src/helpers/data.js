@@ -24,7 +24,7 @@ const infoCourse = {
             // body: `Al ser modular, es un sistema rotativo. El sistema completo tiene una duración de 12 meses.`
         },
         {
-            title: 'Genera un equilibrio entre estudio y trabajo',
+            title: ['Genera un ', <br />, 'equilibrio entre ', <br />, 'estudio y trabajo'],
             // body: `Cada clase en vivo está diseñada para durar 1 hora + un corto periodo extra destinado a consultas.`
         }
     ],
@@ -119,28 +119,23 @@ const infoCourse = {
         {
             name: 'Cristina Villavicencio',
             description: [
-                ' 1Especialista Ambiental enfocado en la integración de nuevas tecnologías.', <br />,
                 'Experiencia de 4 años en el estudio de mercados financieros en economías descentralizadas, usos y campos de aplicación dentro de la tecnología blockchain, así como también en el Trading para la compra - venta de cripto activos y apertura al mercado bursátil tradicional.'
             ]
         },
         {
             name: 'Erick Saa',
             description: [
-                '2 Especialista Ambiental enfocado en la integración de nuevas tecnologías.', <br />,
-                'Experiencia de 4 años en el estudio de mercados financieros en economías descentralizadas, usos y campos de aplicación dentro de la tecnología blockchain, así como también en el Trading para la compra - venta de cripto activos y apertura al mercado bursátil tradicional.'
-            ]
+                'Msc. en Dirección de Marketing, Planner Digital, Comunicador y Marketer. Es docente en la universidad UTEPSA en la carrera de Comunicación Estratégica y Digital. Especialista en E-commerce, medios digitales y reputación online. Actualmente es C.M.O. & Co-fundador de Becademia, y Digital Strategist Manager en iPax Studio.']
         },
         {
             name: 'José Antonio Bedregal',
             description: [
-                '3 Especialista Ambiental enfocado en la integración de nuevas tecnologías.', <br />,
-                'Experiencia de 4 años en el estudio de mercados financieros en economías descentralizadas, usos y campos de aplicación dentro de la tecnología blockchain, así como también en el Trading para la compra - venta de cripto activos y apertura al mercado bursátil tradicional.'
+                'Doctorado en Ciencias de la Administración y Economía, Embajador del Marketing Legal y Ambiental. Creador de Campañas con propósito relevante, en el ámbito Nacional e Internacional. Actualmente es C.E.O. en iPax Studio.'
             ]
         },
         {
             name: 'Marcelo Balcázar',
             description: [
-                '4 Especialista Ambiental enfocado en la integración de nuevas tecnologías.', <br />,
                 'Experiencia de 4 años en el estudio de mercados financieros en economías descentralizadas, usos y campos de aplicación dentro de la tecnología blockchain, así como también en el Trading para la compra - venta de cripto activos y apertura al mercado bursátil tradicional.'
             ]
         }

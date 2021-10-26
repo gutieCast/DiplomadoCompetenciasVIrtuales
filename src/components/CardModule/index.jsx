@@ -35,7 +35,7 @@ const CardModule = ({ id, src, titleImg, item, title, teacher, date, content }) 
                 >
                     <div className="modal-body">
                         <button uk-icon="icon: close; ratio: 2" className="uk-modal-close modal-close-btn" onClick={() => setModalIsOpen(false)}></button>
-                        <p className="modal-text">{`Fecha: ${date}`}</p>
+                        {/* <p className="modal-text">{`Fecha: ${date}`}</p> */}
                         <div className="content-modal">
                             <h4 className="modal-subtitle">Temas:</h4>
                             <ul className="sillabus">

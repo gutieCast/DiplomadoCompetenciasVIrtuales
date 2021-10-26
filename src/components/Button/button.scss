@@ -73,6 +73,13 @@ button {
             cursor: pointer;
             transition: all ease-in-out .5s;
         }
+        &:disabled  {
+            background-color: transparent;
+            border: solid 1px $ligth-gray;
+            color: $info-color;
+            cursor: wait;
+            transition: all ease-in-out .5s;
+        } 
     }
     &.btn-dark {
         &:hover:enabled,
@@ -83,12 +90,12 @@ button {
             cursor: pointer;
             transition: all ease-in-out .5s;
         }  
+        &:disabled  {
+            background-color: transparent;
+            border: solid 1px $ligth-gray;
+            color: $info-color;
+            cursor: wait;
+            transition: all ease-in-out .5s;
+        }      
     }
-    &:disabled  {
-        background-color: transparent;
-        border: solid 1px $ligth-gray;
-        color: $info-color;
-        cursor: wait;
-        transition: all ease-in-out .5s;
-    }      
 }

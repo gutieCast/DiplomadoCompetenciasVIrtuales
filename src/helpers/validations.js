@@ -36,7 +36,8 @@ const validateEmail = (email) => {
 };
 
 const validatePhone = (phone) => {
-    const regExPhone = /^[\]?[(]?[0-9]{3}[)]?[-\s\]?[0-9]{3}[-\s\]?[0-9]{4,6}$/im;
+    console.log(phone);
+    const regExPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     if (!phone || phone === '' || phone === "undefined") {
         return errors.phone = "Por favor, ingrese su número telefónico"
     } else if (!regExPhone.test(phone)) {

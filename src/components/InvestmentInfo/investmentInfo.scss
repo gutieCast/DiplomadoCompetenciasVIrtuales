@@ -24,12 +24,14 @@
         .card-item {
             padding-top: 15px;
             width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
     }
 
     .investment-content {
         width: 70%;
-        // padding: 0 30px;
+        padding-bottom: 50px;
         .investment-text {
            font-weight: bold;
        }

@@ -3,7 +3,6 @@
 
 .slider {
     width: 70vw;
-    padding: 0 0 50px 0;
     height: min-content;
     @include breakpoint-3 {
         width: 70vw;
@@ -28,6 +27,12 @@
             height: 40px;
             cursor: pointer;
             opacity: 1;
+        }
+        .uk-position-center-left {
+            left: -25px;
+        }
+        .uk-position-center-right {
+            right: -25px;
         }
     }
 }

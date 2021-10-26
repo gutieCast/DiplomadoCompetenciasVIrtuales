@@ -4,8 +4,8 @@
 .card-item-module {
     display: flex;
     flex-flow: row wrap;
+    width: auto;
     .card-container-module {
-        margin: 10px;
         padding: 0;
         height: min-content;
         background-size: contain;
@@ -15,9 +15,10 @@
         }
         .module-card {
             // height: 100%;
-            // width: 100%;
-            .card-img {
+            width: 100%;
+            .card-img > img {
                 width: 100%;
+                max-width: 370px;
             }
             .card-info {
                 position: relative;

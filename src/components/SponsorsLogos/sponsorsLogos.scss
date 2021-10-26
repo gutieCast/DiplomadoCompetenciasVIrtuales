@@ -6,22 +6,22 @@
     width: 90%;
     padding: 30px 10px;
     @include breakpoint-2 {
-        width: 80%;
-    }
-    @include breakpoint-4 {
         width: 70%;
     }
+    // @include breakpoint-4 {
+    //     width: 70%;
+    // }
     .grid-collaborators {
         display: grid;
         margin: auto;
         padding: 0;
         
         @include breakpoint-1 {
-            grid-gap: 10px;
             grid-gap: 20px;
             grid-template-columns: repeat(5, 1fr);
         }
         @include breakpoint-2 {
+            grid-gap: 30px;
         }
         .logo-collab-item {
             display: flex;
@@ -30,7 +30,7 @@
         }
         .logo-collab {
             color: $white; 
-            max-width: 100%;
+            max-width: 90%;
             @include breakpoint-4 {
                 max-width: 90px;
             }
